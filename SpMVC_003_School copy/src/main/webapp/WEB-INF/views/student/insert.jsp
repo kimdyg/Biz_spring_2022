@@ -58,7 +58,7 @@ form div {
 					<label>주소</label>
 					<input type="text" placeholder="주소">
 					<div>
-						<button type="reset">저장</button>
+						<button>저장</button>
 						<button type="button">리스트로</button>
 						<button type="reset">다시작성</button>
 					</div>

@@ -72,7 +72,6 @@ div.button-box a:hover {
 	box-shadow: 2px 2px 2px rgba(1, 1, 1, 2.0)
 }
 </style>
-<script src="${rootPath}/static/js/stduent.js?version=2022-04-26"></script>
 <body>
 	<%@ include file="/WEB-INF/views/include/include_header.jsp"%>
 	<%@ include file="/WEB-INF/views/include/include_nav.jsp"%>
