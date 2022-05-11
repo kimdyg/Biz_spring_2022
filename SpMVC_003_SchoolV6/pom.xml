@@ -94,6 +94,14 @@
 			<artifactId>logback-classic</artifactId>
 			<version>1.2.11</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 		<!-- Servlet -->
 		<dependency>
@@ -141,7 +149,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>3.8.1</version>
 				<configuration>
 					<source>${java-version}</source>
 					<target>${java-version}</target>

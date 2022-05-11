@@ -21,7 +21,6 @@
     <artifactId>mybatis</artifactId>
     <version>3.5.9</version>
 </dependency>
-
 ```
 ### mybatis-spring
 * 현재(2022-05-04) 2.0.7 최신버전
@@ -32,7 +31,6 @@
     <artifactId>mybatis-spring</artifactId>
     <version>2.0.7</version>
 </dependency>
-
 ```
 ### commons-dbcp2
 * 현재(2022-05-04) 2.9.0
@@ -44,7 +42,6 @@
     <artifactId>commons-dbcp2</artifactId>
     <version>2.9.0</version>
 </dependency>
-
 ```
 ### object 또는 mysql-connector/j
 * 각 DBMS Vender 별로 제공하는 JDBC
@@ -57,7 +54,6 @@
     <artifactId>ojdbc8</artifactId>
     <version>21.5.0.0</version>
 </dependency>
-
 ```
 * mysql 은 DBMS 버전에 따라 다른 connector 를 사용한다
 * 5.7.x 은 5.x.x 를 사용하고 8.x.x는 현재 8.0.29를 사용한다
