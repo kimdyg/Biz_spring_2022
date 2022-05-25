@@ -108,6 +108,11 @@ button.btn-orange {
 	background-color: orange;
 	color: white;
 }
+
+article.st-list {
+	overflow: auto;
+	max-height: 70vh;
+}
 </style>
 <script>
 	// jsp 의 속성(변수)
@@ -137,13 +142,15 @@ button.btn-orange {
 				<%@ include file="/WEB-INF/views/student/list.jsp" %>
 				</article>
 			</c:when>
-			<c:when test="${LAYOUT == 'ST_INPUT'}">
+			<c:when test="${LAYOUT == 'ST_INPUT'}" >
 				<article>
 				<%@ include file="/WEB-INF/views/student/input.jsp" %>
 				</article>
 			</c:when>
 			<c:otherwise>
-				<article></article>
+				<article class="st-list">
+				<%@ include file="/WEB-INF/views/student/list.jsp" %>
+				</article>
 				<article></article>
 				<article></article>
 			</c:otherwise>

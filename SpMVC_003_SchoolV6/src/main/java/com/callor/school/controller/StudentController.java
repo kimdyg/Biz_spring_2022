@@ -75,7 +75,7 @@ public class StudentController {
 	}
 	
 	@ResponseBody
-	@RequestMapping(value = "/st-num-check",method=RequestMethod.GET)
+	@RequestMapping(value = "/st_num_check",method=RequestMethod.GET)
 	public String st_num_check(String st_num) {
 
 			StudentVO stVO = stService.findByNum(st_num);

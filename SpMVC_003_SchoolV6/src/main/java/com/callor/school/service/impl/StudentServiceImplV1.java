@@ -2,6 +2,8 @@ package com.callor.school.service.impl;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.callor.school.dao.StudentDao;
@@ -13,8 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 /*
  * StudentService stService = new StudentServiceImplV1();
  */
-@Service("stServiceV1")
 @Slf4j
+@Service("stServiceV1")
 public class StudentServiceImplV1 implements StudentService{
 
 	

@@ -1,28 +1,25 @@
 const std_num_check_cb = () => {
   const st_num = document.querySelector("input[name='st_num']");
   if (st_num.value === "") {
-    alert("중복검사를 하려면 학번을 먼저 입력하세요");
+    alert("중복검사를 하려면 학번을 먼저 입력해야함둥");
     st_num.focus();
     return false;
   }
   // alert("입력한 학번 : " + st_num.value);
-  if (std_num_check_cb(st_num.value)) {
+  if (!st_num_fetch(st_num.value)) {
     st_num.focus();
   }
-  // fetch(rootPath+"/student/st_num_check?st_num="+ st_num.value);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   const std_num_check = document.querySelector("button.std-num-check");
 
   /*
-    std_num_check click event handler 를
-    std_num_check_cb 이라는 함수로 별도 선언하고
-    handler 에는 함수 이름을 매개변수로 전달하였다
-    이때 함수이름에는 절대 () 를 붙이지 않는다
-    
+  std_num_check click event handler 를
+  std_num_check_cb 이라는 함수로 별도 선언하고
+  handler 에는 함수 이름을 매개변수로 전달하였다
+  이때 함수이름에는 절대 () 를 붙이지 않다
   */
-
   if (std_num_check) {
     std_num_check.addEventListener("click", std_num_check_cb); // end callback
   }

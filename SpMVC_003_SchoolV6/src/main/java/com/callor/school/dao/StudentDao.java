@@ -11,17 +11,17 @@ import com.callor.school.model.StudentVO;
 
 public interface StudentDao {
 
-	@Select("SELECT * FROM tbl_student")
+	@Select(" SELECT * FROM tbl_student ")
 	public List<StudentVO> selectAll();
 	
-	@Select(" SELECT * FROM tbl_student " + " WHERE st_num = #{st_num}")
+	@Select(" SELECT * FROM tbl_student " + " WHERE st_num = #{st_num} ")
 	public StudentVO findByNum(String st_num);
 	
 	@Insert(SQL.STUDENT.INSERT)
-	public int insert(StudentVO sVO);
+	public int insert(StudentVO stVO);
 	@Update(SQL.STUDENT.UPDATE)
-	public int update(StudentVO sVO);
+	public int update(StudentVO stVO);
 	
-	@Delete("DELETE FROM tbl_student WHERE st_num = #{st_num}")
+	@Delete(" DELETE FROM tbl_student WHERE st_num = #{st_num} ")
 	public int delete(String st_num);
 }
