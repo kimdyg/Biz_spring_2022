@@ -78,3 +78,12 @@
 * 만약 html 데이터를 text/plan 형식으로 보내면 웹브라우저에 html tag 가 단순한 문자열로 그대로 노출된다
 * MIME type 은 인터넷 환경이 발전 할수록 계속 많아지고 더욱 다양해 진다.
 * 현재 주로 많이 사용하는 것은 text/html, image/jpg, video/mp4, audio/mp3, application/json 등이 있다
+
+## 링크를 클릭하여 email 인증하기
+1. 이메일을 입력하고 인증하기를 클릭하면
+2. 이메일만으로 User table에 데이터를 insert 한다
+3. 이때 role 칼럼에 GUEST 로 설정하여 insert 를 한다
+4. email 인증을 클릭하면, 다시 사용자 데이터의 role 을 USER 로 설정한다
+5. 만약 이메일 인증이 안된 사용자가 로그인을 시도하면(role 이 GUEST인 사용자) 이메일 인증이 안되었다는 메시지를 보여준다
+6. 이메일 인증이 완료된 사용자만 로그인을 할수있도록 한다
+7. 사용자 정보를 insert 할때 일단 인증할 email 주소를 username 에 저장하고 비밀번호는 임의 값을 설정한다
