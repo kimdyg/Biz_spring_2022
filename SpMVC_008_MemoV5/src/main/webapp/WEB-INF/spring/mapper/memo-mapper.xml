@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.callor.memo.persistance.MemoDao">
+
+	<select id="findById" resultType="MemoVO">
+		SELECT * FROM tbl_memo
+		WHERE m_seq = #{m_seq}
+	</select>
+	<insert id="insert" parameterType="MemoVO">
+		<selectKey keyProperty="m_seq" resultType="Long"
+			order="BEFORE">
+			select seq_memo.nextval from dual
+		</selectKey>
+		insert into tbl_memo(
+			m_seq,
+			m_author,
+			m_date,
+			m_time,
+			m_memo,
+			m_image
+		) VALUES (
+			#{m_seq},
+			#{m_author},
+			#{m_date},
+			#{m_time},
+			#{m_memo},
+			#{m_image}
+		)
+	</insert>
+	<select id="create_memo_table">
+		CREATE TABLE tbl_memo (
+		m_seq		NUMBER 			PRIMARY KEY,
+		m_author 	VARCHAR2(25) 	NOT NULL,
+		m_date 		VARCHAR2(10) 	NOT NULL,
+		m_time 		VARCHAR2(10) 	NOT NULL,
+		m_memo 		nVARCHAR2(40) 	NOT NULL,
+		m_image 	nVARCHAR2(125)	NOT NULL
+		)
+	</select>
+	<select id="create_memo_seq">
+		create sequence seq_memo
+		increment by 1 start with 1
+	</select>
+</mapper> 
