@@ -18,6 +18,7 @@
 	
 
 </style>
+<%@ include file="../memo/header1.jsp" %>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
 	<div>작성일자 : ${MEMO.m_date}</div>
 	<div>작성시각 : ${MEMO.m_time}</div>
 	<div>메모 : ${MEMO.m_memo}</div>
-	<div>이미지 : <img src="${rootPath}/upload/${MEMO.m_up_image}" alt="${MEMO.m_image}" width="100px"></div>
+	<div>이미지 : <br><img src="${rootPath}/upload/${MEMO.m_up_image}" alt="${MEMO.m_image}" width="60%"></div>
 	<div>
 		<a href="${rootPath}/memo/${MEMO.m_seq}/update">수정</a>
 		<a href="${rootPath}/memo/${MEMO.m_seq}/delete">삭제</a>

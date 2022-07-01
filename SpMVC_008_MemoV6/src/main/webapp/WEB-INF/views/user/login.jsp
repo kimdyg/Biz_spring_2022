@@ -36,7 +36,9 @@
 	}
 
 </style>
+
 </head>
+<%@ include file="../memo/header1.jsp" %>
 <body>
 	<form method="POST">
 		<input name="username" placeholder="USERNAME 입력 후 Enter">
