@@ -74,6 +74,7 @@ div a {
 </script>
 <script src="${rootPath}/static/memo.js?20220627003"></script>
 </head>
+
 <body>
 	<header>
 		<div>Ready Set 포켓몬 Go~</div>
@@ -88,9 +89,9 @@ div a {
 			</div>
 			<tr>
 				<th>GoGoCount</th>
-				<th>작성일자</th>
+				<th>획득 일자</th>
 				<th>작성시간</th>
-				<th>트레이너 모임</th>
+				<th>획득 기록</th>
 			</tr>
 			<c:if test="${empty MEMOS}">
 				<tr>

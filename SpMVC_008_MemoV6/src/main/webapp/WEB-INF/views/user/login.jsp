@@ -10,11 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>login.jsp</title>
 <style>
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
 	html {
 		width: 100vw;
 		height: 100vh;
@@ -22,7 +17,6 @@
 	body {
 		width: 100%;
 		height: 100%;
-		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
@@ -33,18 +27,17 @@
 	input {
 		padding: 1rem;
 		width: 100%;
+		margin: 20% 60%;
 	}
 
 </style>
 
 </head>
-<%@ include file="../memo/header1.jsp" %>
+<%@ include file="/WEB-INF/views/header1.jsp" %>
 <body>
 	<form method="POST">
-		<input name="username" placeholder="USERNAME 입력 후 Enter">
+		<input name="username" placeholder="트레이너명 입력 후 Enter">
 	
 	</form>
-
-
 </body>
 </html>
